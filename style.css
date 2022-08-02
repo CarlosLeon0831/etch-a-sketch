@@ -1,0 +1,90 @@
+/* * {
+  border: 1px solid red;
+} */
+
+body {
+  background-color: #d0d2d1;
+  padding: 0;
+  margin: 0;
+  color: #cccccc;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__container {
+    margin-top: auto;
+    bottom: 0px;
+}
+
+.header__container,
+.footer__container {
+  background-color: #636363;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.content__container {
+  display: flex;
+  flex: 3;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.header__flexbox,
+.content__flexbox,
+.footer__flexbox {
+    display: flex;
+    flex: 1;
+    margin: 8px 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.gridSquare{
+    background-color: white;
+    height: 10px;
+    width: 10px;
+}
+
+.menu {
+    background-color: #636363;
+    color: white;
+    list-style: none;
+    padding: 2rem;
+}
+
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+  }
+  
+  #grid {
+    display: grid;
+    grid-gap: 0;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+  }
+  
+  .grid__item {
+    background-color: white;
+    padding: 1em;
+    text-align: center;
+  }
