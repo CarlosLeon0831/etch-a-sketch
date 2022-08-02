@@ -88,3 +88,7 @@ body {
     padding: 1em;
     text-align: center;
   }
+
+  .grid__item:hover {
+    background-color: black;
+  }
