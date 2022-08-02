@@ -30,13 +30,6 @@ body {
 
 .header__container,
 .footer__container {
-  color: #9c9c9c;
-  background: #e0e0e0;
-  box-shadow: inset 6px 6px 20px #b4b4b4, inset -6px -6px 20px #f6f6f6;
-}
-
-.header__container,
-.footer__container {
   background-color: #e0e0e0;
   display: flex;
   flex: 1;
