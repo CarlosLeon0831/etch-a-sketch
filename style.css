@@ -67,9 +67,13 @@ body {
 .menu {
   background-color: #636363;
   color: white;
-  list-style: none;
   padding: 2rem;
   margin-right: 3rem;
+}
+
+.menu li {
+  list-style: none;
+  margin: 1rem auto;
 }
 
 :root {
@@ -84,7 +88,6 @@ body {
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   margin: 5rem auto;
 
-  border-radius: 11px;
   background: #e0e0e0;
   box-shadow: 13px 13px 34px #cacaca, -13px -13px 34px #f6f6f6;
 }
