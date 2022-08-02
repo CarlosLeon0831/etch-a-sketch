@@ -97,7 +97,3 @@ body {
   padding: 1em;
   text-align: center;
 }
-
-.grid__item:hover {
-  background-color: rgb(119, 119, 119);
-}
