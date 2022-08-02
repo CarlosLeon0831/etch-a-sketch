@@ -91,6 +91,7 @@ function activateButton(newMode) {
   } else if (mode === "eraser") {
     eraserBtn.classList.add("active");
   }
+
 }
 
 window.onload = () => {
