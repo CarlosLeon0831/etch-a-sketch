@@ -3,10 +3,10 @@
 } */
 
 body {
-  background-color: #d0d2d1;
+  background-color: #e0e0e0;
   padding: 0;
   margin: 0;
-  color: #cccccc;
+  color: #636363;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
@@ -24,13 +24,13 @@ body {
 }
 
 .footer__container {
-    margin-top: auto;
-    bottom: 0px;
+  margin-top: auto;
+  bottom: 0px;
 }
 
 .header__container,
 .footer__container {
-  background-color: #636363;
+  background-color: #e0e0e0;
   display: flex;
   flex: 1;
   align-items: center;
@@ -51,44 +51,50 @@ body {
 .header__flexbox,
 .content__flexbox,
 .footer__flexbox {
-    display: flex;
-    flex: 1;
-    margin: 8px 5rem;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex: 1;
+  margin: 8px 5rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.gridSquare{
-    background-color: white;
-    height: 10px;
-    width: 10px;
+.gridSquare {
+  background-color: white;
+  height: 10px;
+  width: 10px;
 }
 
 .menu {
-    background-color: #636363;
-    color: white;
-    list-style: none;
-    padding: 2rem;
+  background-color: #636363;
+  color: white;
+  list-style: none;
+  padding: 2rem;
+  margin-right: 3rem;
 }
 
 :root {
-    --grid-cols: 1;
-    --grid-rows: 1;
-  }
-  
-  #grid {
-    display: grid;
-    grid-gap: 0;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
-  }
-  
-  .grid__item {
-    background-color: white;
-    padding: 1em;
-    text-align: center;
-  }
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
 
-  .grid__item:hover {
-    background-color: black;
-  }
+#grid {
+  display: grid;
+  grid-gap: 0;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  margin: 5rem auto;
+
+  border-radius: 11px;
+  background: #e0e0e0;
+  box-shadow: 13px 13px 34px #cacaca, -13px -13px 34px #f6f6f6;
+}
+
+.grid__item {
+  background-color: #e0e0e0;
+  padding: 1em;
+  text-align: center;
+}
+
+.grid__item:hover {
+  background-color: rgb(119, 119, 119);
+}
