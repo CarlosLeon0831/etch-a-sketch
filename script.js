@@ -88,7 +88,7 @@ function changeColor(e) {
   if (mode === "color") {
     e.target.style.backgroundColor = color;
   } else if (mode === "eraser") {
-    e.target.style.backgroundColor = "#e0e0e0";
+    e.target.style.backgroundColor = "transparent";
   }
 }
 
