@@ -43,10 +43,17 @@ button {
   cursor: pointer;
 }
 
-.dark-mode {
-  background-color: #333333;
+/* Dark mode */
+.dark-mode { 
+  background: #333333;
   color: #e0e0e0;
 }
+.footer__container.dark-mode,
+.header__container.dark-mode {
+  background: #333333;
+}
+
+
 
 .content {
   display: flex;

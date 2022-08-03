@@ -34,6 +34,8 @@ const sizeValue = document.getElementById("sizeValue");
 const sizeSlider = document.getElementById("sizeSlider");
 const grid = document.getElementById("grid");
 const body = document.getElementById("body");
+const header = document.getElementById("header");
+const footer = document.getElementById("footer");
 
 colorPicker.oninput = (e) => setColor(e.target.value);
 colorBtn.onclick = () => setMode("color");
@@ -90,12 +92,10 @@ function changeColor(e) {
 
 function changeTheme(newTheme) {
   if (theme === "dark") {
-    body.classList.remove("dark-mode");
-    grid.classList.remove("dark-mode");
-  }
-  if (newTheme === "dark") {
-    body.classList.add("dark-mode");
-    grid.classList.add("dark-mode");
+    body.classList.toggle("dark-mode");
+    grid.classList.toggle("dark-mode");
+    header.classList.toggle("dark-mode");
+    footer.classList.toggle("dark-mode")
   }
 }
 
