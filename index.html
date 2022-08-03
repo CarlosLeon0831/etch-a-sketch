@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <body>
+  <body id="body">
     <div class="content">
       <div class="header__container">
         <div class="header__flexbox">
@@ -16,14 +16,18 @@
         </div>
         <div class="header__menu">
           <input id="colorPicker" type="color" value="#636363" />
-          <button id="colorBtn"><img src="./img/pencil.png" alt="pencil"></button>
-          <button id="eraserBtn"><img src="./img/eraser.png" alt="eraser"></button>
+          <button id="colorBtn">
+            <img src="./img/pencil.png" alt="pencil" />
+          </button>
+          <button id="eraserBtn">
+            <img src="./img/eraser.png" alt="eraser" />
+          </button>
           <button id="clearBtn">Clear</button>
+          <button id="themeBtn">Dark </button>
         </div>
       </div>
       <div class="content__container">
-  
-          <div class="grid" id="grid"></div>
+        <div class="grid" id="grid"></div>
 
         <div class="sizeValue__flexbox">
           <div id="sizeValue" class="size-value">16 x 16</div>

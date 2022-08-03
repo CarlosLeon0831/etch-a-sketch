@@ -1,10 +1,12 @@
 const DEFAULT_COLOR = "#636363";
 const DEFAULT_MODE = "color";
 const DEFAULT_SIZE = 16;
+const DEFAULT_THEME = "light";
 
 let color = DEFAULT_COLOR;
 let mode = DEFAULT_MODE;
 let size = DEFAULT_SIZE;
+let theme = DEFAULT_THEME;
 
 // Change options
 function setColor(newColor) {
@@ -18,18 +20,26 @@ function setSize(newSize) {
   size = newSize;
 }
 
+function setTheme(newTheme) {
+  changeTheme(newTheme);
+  theme = newTheme;
+}
+
 const colorPicker = document.getElementById("colorPicker");
 const colorBtn = document.getElementById("colorBtn");
 const eraserBtn = document.getElementById("eraserBtn");
 const clearBtn = document.getElementById("clearBtn");
+const themeBtn = document.getElementById("themeBtn");
 const sizeValue = document.getElementById("sizeValue");
 const sizeSlider = document.getElementById("sizeSlider");
 const grid = document.getElementById("grid");
+const body = document.getElementById("body");
 
 colorPicker.oninput = (e) => setColor(e.target.value);
 colorBtn.onclick = () => setMode("color");
 eraserBtn.onclick = () => setMode("eraser");
 clearBtn.onclick = () => reloadGrid();
+themeBtn.onclick = () => setTheme("dark");
 sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value);
 sizeSlider.onchange = (e) => changeSize(e.target.value);
 
@@ -59,8 +69,8 @@ function clearGrid() {
 
 // Grid
 function makeRows(size) {
-  grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`
-  grid.style.gridTemplateRows = `repeat(${size}, 1fr)`
+  grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
   for (c = 0; c < size * size; c++) {
     let cell = document.createElement("div");
     grid.appendChild(cell).className = "grid__item";
@@ -78,6 +88,17 @@ function changeColor(e) {
   }
 }
 
+function changeTheme(newTheme) {
+  if (theme === "dark") {
+    body.classList.remove("dark-mode");
+    grid.classList.remove("dark-mode");
+  }
+  if (newTheme === "dark") {
+    body.classList.add("dark-mode");
+    grid.classList.add("dark-mode");
+  }
+}
+
 // Buttons
 function activateButton(newMode) {
   if (mode === "color") {
@@ -91,10 +112,10 @@ function activateButton(newMode) {
   } else if (newMode === "eraser") {
     eraserBtn.classList.add("active");
   }
-
 }
 
 window.onload = () => {
   makeRows(DEFAULT_SIZE);
   activateButton(DEFAULT_MODE);
+  changeTheme(DEFAULT_THEME);
 };
