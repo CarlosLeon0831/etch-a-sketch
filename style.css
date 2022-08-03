@@ -44,10 +44,26 @@ button {
 }
 
 /* Dark mode */
+
 .dark-mode { 
   background: #333333;
-  color: #e0e0e0;
+  color: #4f4f4f;
 }
+
+#grid.dark-mode {
+  background: #333333;
+  box-shadow: 13px 13px 34px #2b2b2b, -13px -13px 34px #3b3b3b;
+}
+
+#colorBtn.dark-mode,
+#eraserBtn.dark-mode,
+#clearBtn.dark-mode,
+#themeBtn.dark-mode,
+#colorPicker.dark-mode {
+  background: #333333;
+  box-shadow: 7px 7px 15px #2b2b2b, -7px -7px 15px #3b3b3b;
+}
+
 .footer__container.dark-mode,
 .header__container.dark-mode {
   background: #333333;

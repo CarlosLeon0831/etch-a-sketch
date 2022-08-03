@@ -33,6 +33,7 @@ const themeBtn = document.getElementById("themeBtn");
 const sizeValue = document.getElementById("sizeValue");
 const sizeSlider = document.getElementById("sizeSlider");
 const grid = document.getElementById("grid");
+// const grid__item = document.getElementById("grid__item");
 const body = document.getElementById("body");
 const header = document.getElementById("header");
 const footer = document.getElementById("footer");
@@ -75,6 +76,7 @@ function makeRows(size) {
   grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
   for (c = 0; c < size * size; c++) {
     let cell = document.createElement("div");
+    // cell.id = "grid__item";
     grid.appendChild(cell).className = "grid__item";
     cell.addEventListener("mouseover", changeColor);
     cell.addEventListener("mousedown", changeColor);
@@ -91,11 +93,17 @@ function changeColor(e) {
 }
 
 function changeTheme(newTheme) {
-  if (theme === "dark") {
+  if (newTheme === "dark") {
     body.classList.toggle("dark-mode");
     grid.classList.toggle("dark-mode");
     header.classList.toggle("dark-mode");
-    footer.classList.toggle("dark-mode")
+    footer.classList.toggle("dark-mode");
+    colorBtn.classList.toggle("dark-mode");
+    eraserBtn.classList.toggle("dark-mode");
+    clearBtn.classList.toggle("dark-mode");
+    themeBtn.classList.toggle("dark-mode");
+    colorPicker.classList.toggle("dark-mode");
+    // grid__item.classList.toggle("dark-mode");
   }
 }
 
