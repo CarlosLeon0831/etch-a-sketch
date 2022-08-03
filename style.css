@@ -81,10 +81,6 @@ body {
   margin-top: 1rem;
 }
 
-.header__menu button:hover {
-  color: white;
-  background: #a7a7a7;
-}
 
 input[type='color']::-webkit-color-swatch {
   border: none;
@@ -119,7 +115,7 @@ input[type='color']:hover {
 }
 
 
-button.active:active {
+.active{
   border-radius: 19px;
   color: #636363;
   background: #e0e0e0;
@@ -144,7 +140,7 @@ input[type='color'] {
   background: #e0e0e0;
   box-shadow: 7px 7px 15px #c7c7c7, -7px -7px 15px #f9f9f9;
 }
-.header__menu button {
+button {
   color: #636363;
   font-family: "Futura", sans-serif;
   font-weight: bold;

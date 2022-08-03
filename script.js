@@ -88,7 +88,7 @@ function activateButton(newMode) {
 
   if (newMode === "color") {
     colorBtn.classList.add("active");
-  } else if (mode === "eraser") {
+  } else if (newMode === "eraser") {
     eraserBtn.classList.add("active");
   }
 
